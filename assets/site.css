@@ -468,3 +468,9 @@ ul.dots li::before{content:"";position:absolute;left:0;top:.55em;width:10px;heig
 .foot-links{width:auto}
 @media (max-width:640px){.foot-links{width:100%}}
 @media (max-width:640px){.foot{padding:22px 20px}.foot-links a{padding:6px 14px;font-size:14px}}
+
+/* Modernes E-Mail-Symbol */
+.mailicon{position:relative;width:52px;height:52px;flex:none;display:grid;place-items:center}
+.mailicon>svg:first-child{position:absolute;inset:0;width:100%;height:100%}
+.mailicon>svg:first-child path{fill:var(--onacc)}
+.mailicon>svg:last-child{position:relative;width:26px;height:26px;fill:var(--acc)}
