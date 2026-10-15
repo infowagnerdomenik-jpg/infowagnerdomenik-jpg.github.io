@@ -585,3 +585,19 @@ ul.dots{padding-left:0;margin-left:0}
 @media (max-width:420px){.brand{flex:1 1 auto}}
 .body h2 .t{min-width:0}
 ul.dots li{overflow-wrap:anywhere}
+
+/* Universal-Search-Kachel: aufgeräumt in jeder Breite */
+.tile.tile-row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:20px 24px;padding:22px}
+.tile-row>img{width:96px;height:96px;grid-row:1}
+.tile-row>div{display:grid;gap:6px}
+.tile-row h3,.tile-row p{padding:0}
+.tile-row .go{margin:0;align-self:center;justify-self:end}
+@media (max-width:760px){
+  .tile.tile-row{grid-template-columns:auto minmax(0,1fr);gap:14px 16px;padding:18px}
+  .tile-row>img{width:64px;height:64px}
+  .tile-row h3{font-size:20px}
+  .tile-row .go{grid-column:1/-1;justify-self:start}
+}
+@media (max-width:420px){.tile-row>img{width:52px;height:52px}.tile-row h3{font-size:18px}.tile.tile-row{padding:16px}}
+
+@media (max-width:1000px){.intro-pic{display:none!important}}
