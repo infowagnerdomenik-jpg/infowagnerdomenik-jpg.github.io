@@ -362,7 +362,7 @@ html.unlocking #gate{display:none}
 
 /* Abstände: Hauptkarten etwas weiter auseinander, weniger zum Footer */
 .stack{gap:28px}
-footer{margin-top:44px}
+footer{margin-top:28px}
 
 /* Logo-Kacheln: dunkle Kacheln auch im dunklen Modus abgrenzen */
 .brand-tile.dark{box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
@@ -439,3 +439,32 @@ ul.dots li::before{content:"";position:absolute;left:0;top:.55em;width:10px;heig
 
 .person{grid-template-columns:auto 1fr}
 @media (max-width:640px){.person{grid-template-columns:1fr}}
+
+/* Menü (nur schmale Ansicht) */
+.menu-btn{display:none}
+.sheet{position:absolute;left:24px;right:24px;top:76px;z-index:60}
+.sheet-in{display:grid;gap:6px;padding:10px;border-radius:32px;background:var(--surface);box-shadow:0 1px 0 color-mix(in srgb,var(--outline) 40%,transparent),0 24px 60px -20px rgba(0,0,0,.45);transform-origin:top right;animation:sheetIn .38s var(--spring)}
+.sheet-item{display:flex;align-items:center;gap:14px;min-height:60px;padding:6px 18px 6px 6px;border-radius:30px;text-decoration:none;color:var(--on);font-weight:600;font-size:17px;transition:background .2s,border-radius .35s var(--spring)}
+.sheet-item .mini{width:48px;height:48px}.sheet-item .mini>svg:last-child{width:24px;height:24px}
+.sheet-item>span:nth-child(2){flex:1}
+.sheet-item>svg{width:22px;height:22px;fill:var(--on2);flex:none}
+.sheet-item:hover{background:var(--surface2);border-radius:16px}
+.sheet-item.active{background:var(--c);color:var(--onc)}.sheet-item.active>svg{fill:var(--onc)}
+.sheet-legal{display:flex;flex-wrap:wrap;gap:8px;padding:10px 8px 6px;border-top:1px solid color-mix(in srgb,var(--outline) 40%,transparent);margin-top:4px}
+.sheet-legal a{display:inline-flex;align-items:center;min-height:36px;padding:6px 14px;border-radius:18px;background:var(--surface2);color:var(--on2);font-size:14px;font-weight:600;text-decoration:none}
+@keyframes sheetIn{from{opacity:0;transform:translateY(-8px) scale(.96)}}
+@media (max-width:1000px){.menu-btn{display:grid}}
+@media (max-width:640px){.sheet{left:16px;right:16px}.bar-in .btn.small{display:none}}
+
+/* Fußleiste schlicht */
+.foot{gap:16px;padding:26px 28px}
+.foot-row{gap:14px 24px}
+@media (max-width:640px){.foot-row{flex-direction:column;align-items:flex-start}}
+
+/* Gleichmäßige Abstände auf der Startseite */
+.quote,.sec{margin-top:28px}
+.sec .sec-head{margin-top:20px}
+
+.foot-links{width:auto}
+@media (max-width:640px){.foot-links{width:100%}}
+@media (max-width:640px){.foot{padding:22px 20px}.foot-links a{padding:6px 14px;font-size:14px}}
