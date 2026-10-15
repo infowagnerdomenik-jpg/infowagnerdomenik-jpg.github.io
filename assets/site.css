@@ -647,3 +647,10 @@ ul.dots li{overflow-wrap:anywhere}
 .us-info .btn.tonal{background:color-mix(in srgb,var(--surface) 70%,transparent);color:var(--on)}
 @media (max-width:420px){.us-info p{font-size:15.5px}.us-info .actions{gap:8px}.us-info .btn{min-height:48px;font-size:15px;padding:10px 18px 10px 14px}}
 @media (max-width:340px){.us-art{width:58px;padding:10px 0 10px 10px}.us-art>svg:first-child{width:44px;height:44px}.us-art>svg:last-child{width:22px;height:22px}.us-go{width:44px}.us-card:hover .us-go{width:50px}.us-text{padding:14px 10px 14px 8px}.us-text b{font-size:15.5px}.us-text span{font-size:13px}.us-deco.d2,.us-deco.d3{display:none}}
+
+/* Universal-Search-Karte ohne Pfeil-Streifen (Knöpfe stehen in der Info-Karte) */
+div.us-card:hover{border-radius:32px;transform:none}
+.us-card .us-deco.d2{right:16px}
+.us-card .us-deco.d3{right:22px}
+.us-text{padding-right:22px}
+.us-card .us-deco.d2{display:none}
