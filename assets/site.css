@@ -483,3 +483,25 @@ ul.dots li::before{content:"";position:absolute;left:0;top:.55em;width:10px;heig
 .gate .msg{min-height:0}
 .gate .msg:empty{display:none}
 @media (max-width:640px){.gate{padding:24px;border-radius:32px}.field{height:56px;padding:0 6px 0 18px}}
+
+/* Handy-Korrekturen */
+.tiles.tiles2{grid-template-columns:repeat(2,1fr)}
+@media (max-width:640px){.tiles.tiles2{grid-template-columns:1fr}}
+h1,h2,h3{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+.block>h2{min-width:0}
+.block>h2>span:last-child,.block>h2{word-break:normal}
+@media (max-width:640px){
+  .block>h2{font-size:26px;gap:12px;padding:10px 8px 2px}
+  .block>h2 .badge{width:52px;height:52px}.block>h2 .badge>svg:last-child{width:24px;height:24px}
+  .shot{min-height:0;padding:12px;border-radius:24px}
+  .shot img{max-height:none;width:100%}
+  .job2 .info{padding:22px;min-width:0}
+  .job2 .logo2{max-width:100%;padding:10px 14px}
+  .job2 .logo2 img{max-width:100%;max-height:64px}
+  .job2 h3{font-size:24px}
+  .job2 .role{font-size:18px}
+}
+.job2 .info{min-width:0}
+.job2 .btn,.card .btn,.msgr .btn{max-width:100%}
+.job2 .logo2 img{max-width:100%}
+@media (max-width:640px){.page-head h1{font-size:30px;letter-spacing:-.02em}.page-head{padding:32px 24px}}
