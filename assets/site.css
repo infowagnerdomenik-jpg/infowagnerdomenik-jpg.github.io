@@ -639,3 +639,11 @@ ul.dots li{overflow-wrap:anywhere}
 .us-card:hover .us-go{width:clamp(64px,15vw,96px)}
 .us-card:active{transform:scale(.985)}
 @media (prefers-reduced-motion: reduce){.us-card:hover .us-go svg{transform:none}}
+
+/* Infos unter der Universal-Search-Karte */
+.us-info p{margin-top:2px;font-size:17px}
+.us-info .facts{margin-top:16px}
+.us-info .actions{margin-top:22px}
+.us-info .btn.tonal{background:color-mix(in srgb,var(--surface) 70%,transparent);color:var(--on)}
+@media (max-width:420px){.us-info p{font-size:15.5px}.us-info .actions{gap:8px}.us-info .btn{min-height:48px;font-size:15px;padding:10px 18px 10px 14px}}
+@media (max-width:340px){.us-art{width:58px;padding:10px 0 10px 10px}.us-art>svg:first-child{width:44px;height:44px}.us-art>svg:last-child{width:22px;height:22px}.us-go{width:44px}.us-card:hover .us-go{width:50px}.us-text{padding:14px 10px 14px 8px}.us-text b{font-size:15.5px}.us-text span{font-size:13px}.us-deco.d2,.us-deco.d3{display:none}}
