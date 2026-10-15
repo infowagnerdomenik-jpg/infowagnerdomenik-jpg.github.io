@@ -436,3 +436,6 @@ ul.dots li::before{content:"";position:absolute;left:0;top:.55em;width:10px;heig
 .mini>svg:first-child path{fill:var(--c)}
 .mini>svg:last-child{position:relative;width:30px;height:30px;fill:var(--acc)}
 @media (hover:hover){.tip:hover .mini>svg:first-child{transform:rotate(60deg) scale(1.08)}}
+
+.person{grid-template-columns:auto 1fr}
+@media (max-width:640px){.person{grid-template-columns:1fr}}
