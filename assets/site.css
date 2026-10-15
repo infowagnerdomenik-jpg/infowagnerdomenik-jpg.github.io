@@ -601,3 +601,41 @@ ul.dots li{overflow-wrap:anywhere}
 @media (max-width:420px){.tile-row>img{width:52px;height:52px}.tile-row h3{font-size:18px}.tile.tile-row{padding:16px}}
 
 @media (max-width:1000px){.intro-pic{display:none!important}}
+
+/* Universal-Search-Kachel: ursprüngliches Zeilen-Design in jeder Breite (skaliert statt umgebaut) */
+.tile.tile-row{display:flex;flex-direction:row;align-items:center;gap:24px;padding:22px}
+.tile-row>img{width:110px;height:110px;flex:none;grid-row:auto}
+.tile-row>div{flex:1 1 auto;min-width:0;display:grid;gap:8px}
+.tile-row h3{font-size:26px;padding:0}
+.tile-row p{padding:0}
+.tile-row .go{margin:0 0 0 auto;flex:none;align-self:center;justify-self:auto;grid-column:auto}
+@media (max-width:760px){
+  .tile.tile-row{flex-direction:row;align-items:center;gap:14px;padding:16px}
+  .tile-row>img{width:clamp(52px,16vw,84px);height:clamp(52px,16vw,84px)}
+  .tile-row h3{font-size:clamp(17px,4.6vw,22px)}
+  .tile-row p{font-size:clamp(13.5px,3.6vw,16px)}
+  .tile-row .go{width:48px;height:48px;min-height:48px;padding:0;justify-content:center;border-radius:24px}
+  .tile-row .go .go-t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+}
+@media (max-width:420px){.tile.tile-row{padding:14px;gap:12px}.tile-row .go{width:44px;height:44px;min-height:44px}}
+
+/* ─── Universal-Search-Karte (modern, gleich in jeder Breite) ─── */
+.us-card{position:relative;display:flex;align-items:stretch;min-height:132px;border-radius:32px;background:var(--surface);color:var(--on);text-decoration:none;overflow:hidden;isolation:isolate;transition:border-radius .45s var(--spring),transform .45s var(--spring)}
+.us-deco{position:absolute;z-index:-1;pointer-events:none}.us-deco path{fill:var(--acc)}
+.us-deco.d1{width:180px;left:-60px;bottom:-90px;opacity:.12}
+.us-deco.d2{width:22px;right:calc(clamp(56px,13vw,84px) + 10px);top:10px;opacity:.35}
+.us-deco.d3{width:20px;right:calc(clamp(56px,13vw,84px) + 14px);bottom:14px;opacity:.5;animation-delay:-3s}
+.us-art{position:relative;flex:none;width:clamp(78px,22vw,132px);display:grid;place-items:center;padding:14px 4px 14px 14px}
+.us-art>svg:first-child{position:absolute;width:clamp(56px,16vw,96px);height:clamp(56px,16vw,96px)}
+.us-art>svg:first-child path{fill:var(--acc)}
+.us-art>svg:last-child{position:relative;width:clamp(26px,7vw,44px);height:clamp(26px,7vw,44px);fill:var(--onacc)}
+.us-text{flex:1 1 auto;min-width:0;display:grid;align-content:center;gap:6px;padding:18px 16px 18px 10px}
+.us-text b{font-size:clamp(17px,2.4vw + 8px,26px);line-height:1.2;letter-spacing:-.01em;overflow-wrap:break-word;hyphens:auto}
+.us-text span{font-size:clamp(13.5px,1vw + 10px,16.5px);color:var(--on2);overflow-wrap:break-word;hyphens:auto}
+.us-go{flex:none;width:clamp(56px,13vw,84px);display:grid;place-items:center;background:var(--acc);color:var(--onacc);transition:width .45s var(--spring)}
+.us-go svg{width:clamp(24px,6vw,32px);height:clamp(24px,6vw,32px);fill:currentColor;transition:transform .45s var(--spring)}
+.us-card:hover{border-radius:48px;transform:translateY(-3px)}
+.us-card:hover .us-go svg,.us-card:active .us-go svg{transform:translateX(6px)}
+.us-card:hover .us-go{width:clamp(64px,15vw,96px)}
+.us-card:active{transform:scale(.985)}
+@media (prefers-reduced-motion: reduce){.us-card:hover .us-go svg{transform:none}}
