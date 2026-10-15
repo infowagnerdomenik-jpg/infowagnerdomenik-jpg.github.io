@@ -261,3 +261,93 @@ footer{max-width:1240px;margin:80px auto 32px;padding:0 24px}
   .bar-in .btn.small span{display:none}.bar-in .btn.small{padding:0 12px}
   .sticker{display:none}
 }
+
+/* ─── Unterseiten-Aufbau ─── */
+.crumbs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;position:relative}
+.crumbs a,.crumbs span{display:inline-flex;align-items:center;height:32px;padding:0 14px;border-radius:16px;font-size:14px;font-weight:600;text-decoration:none;background:color-mix(in srgb,var(--surface) 55%,transparent);color:var(--onc)}
+.crumbs a:hover{background:var(--surface)}
+.page.wide{max-width:1240px}
+.page-head .actions{position:relative;margin-top:22px}
+.page-head .btn.fill{background:var(--acc);color:var(--onacc)}
+.page-head .btn.tonal{background:var(--surface);color:var(--on)}
+.stack{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:16px}
+.block{border-radius:40px;background:color-mix(in srgb,var(--c) 45%,var(--bg));padding:16px;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.block>h2{display:flex;align-items:center;gap:14px;font-size:clamp(28px,3.4vw,40px);letter-spacing:-.02em;line-height:1.1;padding:14px 14px 4px}
+.block>h2 .badge{width:64px;height:64px}.block>h2 .badge>svg:last-child{width:30px;height:30px}
+.prose{font-size:17px;color:var(--on2)}
+.prose p+p{margin-top:12px}
+.prose b{color:var(--on)}
+blockquote.play{margin-top:4px;padding:18px 22px;border-radius:24px;background:var(--surface2);font-style:italic;color:var(--on)}
+blockquote.play cite{display:block;margin-top:8px;font-style:normal;font-weight:700;font-size:14px;color:var(--on2)}
+
+/* Startseite: große Kacheln zu den Unterseiten */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{position:relative;display:flex;flex-direction:column;gap:14px;border-radius:40px;background:var(--surface);padding:18px 18px 26px;text-decoration:none;color:var(--on);overflow:hidden;transition:border-radius .45s var(--spring),transform .45s var(--spring)}
+.tile .pic{position:relative;aspect-ratio:4/3;border-radius:28px;overflow:hidden;background:var(--c);display:grid;place-items:center;transition:border-radius .45s var(--spring)}
+.tile .pic img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.tile .pic.round img{width:62%;height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover}
+.tile h3{font-size:26px;letter-spacing:-.01em;line-height:1.15;padding:0 8px}
+.tile p{color:var(--on2);padding:0 8px;font-size:16px}
+.tile .go{margin:auto 8px 0;display:inline-flex;align-items:center;gap:8px;align-self:flex-start;height:48px;padding:0 20px 0 16px;border-radius:24px;background:var(--acc);color:var(--onacc);font-weight:700;transition:border-radius .35s var(--spring)}
+.tile .go svg{width:22px;height:22px;fill:currentColor}
+.tile .lockchip{position:absolute;top:30px;right:30px;display:flex;align-items:center;gap:6px;height:34px;padding:0 14px 0 10px;border-radius:17px;background:var(--surface);color:var(--on);font-weight:700;font-size:13px;z-index:1}
+.tile .lockchip svg{width:18px;height:18px;fill:currentColor}
+@media (hover:hover){.tile:hover{border-radius:56px;transform:translateY(-4px)}.tile:hover .pic{border-radius:44px}.tile:hover .pic img{transform:scale(1.05)}.tile:hover .go{border-radius:14px}}
+.intro{display:grid;grid-template-columns:1.3fr .7fr;gap:16px}
+.sign{font-weight:700;color:var(--on);margin-top:14px}
+
+/* Screenshot-Leiste */
+.strip-wrap{position:relative;min-width:0}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 14px;scrollbar-width:thin}
+.strip button{flex:none;width:200px;border:0;padding:0;background:none;border-radius:26px;overflow:hidden;cursor:zoom-in;scroll-snap-align:start;transition:border-radius .4s var(--spring)}
+.strip img{width:100%;height:auto}
+.strip button:hover{border-radius:40px}
+.strip-nav{display:flex;gap:8px;justify-content:flex-end;padding:0 6px}
+.strip-nav button{width:48px;height:48px;border-radius:24px;border:0;background:var(--acc);color:var(--onacc);display:grid;place-items:center;cursor:pointer;transition:border-radius .3s var(--spring)}
+.strip-nav button:hover{border-radius:14px}
+.strip-nav svg{width:24px;height:24px;fill:currentColor}
+.strip-nav .count{margin-right:auto;align-self:center;font-weight:600;color:var(--on2);padding-left:10px}
+
+/* Projektseite Universal Search */
+.us-head{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;position:relative}
+.us-head img{width:140px;height:140px}
+.github{display:grid;place-items:center;border-radius:28px;overflow:hidden;background:#0D1117;padding:24px}
+.github img{width:100%}
+
+/* Laufbahn: große Karten */
+.job2{display:grid;grid-template-columns:1.1fr .9fr;gap:0;border-radius:40px;background:var(--surface);overflow:hidden}
+.job2 .photo2{position:relative;min-height:360px}
+.job2 .photo2 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.job2 .info{padding:36px 36px 34px;display:flex;flex-direction:column;gap:12px}
+.job2 .logo2{align-self:flex-start;max-width:100%;border-radius:20px;background:#fff;padding:14px 18px}
+.job2 .logo2 img{max-height:86px;max-width:300px;width:auto}
+.job2 .when{display:inline-flex;align-self:flex-start;height:36px;align-items:center;padding:0 16px;border-radius:18px;background:var(--c);color:var(--onc);font-weight:700;font-size:15px}
+.job2 h3{font-size:clamp(26px,2.8vw,36px);letter-spacing:-.02em;line-height:1.12}
+.job2 .role{font-size:20px;font-weight:600;color:var(--on)}
+.job2 .place{color:var(--on2);font-size:16px}
+.job2 .btn{align-self:flex-start;margin-top:auto;background:var(--acc);color:var(--onacc)}
+
+/* Kontakt: Messenger */
+.msgrs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.msgr{border-radius:36px;background:var(--surface);padding:28px;display:flex;flex-direction:column;gap:14px}
+.msgr h3{font-size:26px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.msgr h3 img{width:56px;height:56px;border-radius:50%}
+.msgr .write{display:flex;align-items:center;gap:14px;height:68px;padding:0 24px 0 8px;border-radius:34px;background:var(--acc);color:var(--onacc);text-decoration:none;font-weight:700;font-size:17px;transition:border-radius .35s var(--spring)}
+.msgr .write img{width:52px;height:52px;border-radius:50%}
+.msgr .write:hover{border-radius:18px}
+.msgr dl{display:grid;gap:4px}
+.msgr dt{font-weight:700;font-size:14px;color:var(--on2)}
+.msgr dd{font:600 15px ui-monospace,Consolas,monospace;word-break:break-all;margin-bottom:8px}
+.msgr dd a{color:var(--primary)}
+.msgr .note{font-size:15px;color:var(--on2);padding:14px 18px;border-radius:20px;background:var(--surface2)}
+.msgr .dl{align-self:flex-start;margin-top:auto}
+.rate sup{font-size:11px;margin-left:3px}
+.notes{display:grid;gap:10px;counter-reset:n;list-style:none;padding:0}
+.notes li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;color:var(--on2);font-size:16px}
+.notes li b.n{width:40px;height:40px;border-radius:20px;background:var(--acc);color:var(--onacc);display:grid;place-items:center;font-size:15px}
+.figure{border-radius:28px;overflow:hidden;background:#fff;cursor:zoom-in;border:0;padding:0;display:block;width:100%}
+.figure img{width:100%}
+.caption{font-size:14px;color:var(--on2);padding:2px 10px}
+
+@media (max-width:1000px){.tiles{grid-template-columns:1fr 1fr}.intro{grid-template-columns:1fr}.job2{grid-template-columns:1fr}.job2 .photo2{min-height:260px}.msgrs{grid-template-columns:1fr}}
+@media (max-width:640px){.tiles{grid-template-columns:1fr}.block{padding:10px;border-radius:32px}.us-head{grid-template-columns:1fr}.us-head img{width:96px;height:96px}.job2 .info{padding:26px}.msgr{padding:22px}.strip button{width:160px}}
