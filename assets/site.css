@@ -505,3 +505,83 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
 .job2 .btn,.card .btn,.msgr .btn{max-width:100%}
 .job2 .logo2 img{max-width:100%}
 @media (max-width:640px){.page-head h1{font-size:30px;letter-spacing:-.02em}.page-head{padding:32px 24px}}
+
+/* ─── Überhänge generell verhindern ─── */
+/* Raster- und Flex-Kinder dürfen schrumpfen */
+.card,.tile,.block,.msgr,.tip,.stat2,.logo,.shot,.photo,.job2,.job2 .info,.page-head,.quote-in,.hero-in>*,.intro>*,.stack>*,.panel>*,.grid2>*,.grid3>*,.tiles>*,.logos>*,.contacts>*,.msgrs>*,.stats2>*,.tips>*,.sec-head>div,.block>h2 .t,.tile-row>div,.person>div,.kv>*,.notes li>span{min-width:0}
+/* Text bricht notfalls um – mit Silbentrennung, lange Wörter/Links dürfen getrennt werden */
+h1,h2,h3,p,li,dd,dt,blockquote,cite,.t,.btn,.go,.chip,.write,.crumbs a,.crumbs span,.sheet-item span,.logo span{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+a[href^="http"],dd,code{overflow-wrap:anywhere}
+.btn,.go,.write,.chip{max-width:100%}
+.btn{white-space:normal}
+img,video{max-width:100%}
+.block>h2{align-items:center}
+/* Kachel „Universal Search“ als Zeile, auf schmalen Ansichten untereinander */
+.tile-row{flex-direction:row;align-items:center;gap:24px;padding:22px}
+.tile-row>img{width:110px;height:110px;flex:none}
+.tile-row .go{margin:0 0 0 auto;flex:none}
+@media (max-width:640px){.tile-row{flex-direction:column;align-items:flex-start;gap:14px}.tile-row .go{margin:0}.tile-row>img{width:84px;height:84px}}
+.logos{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+
+/* Sehr schmale Ansichten */
+@media (max-width:420px){
+  .wrap,.bar,.hero,.sec,.quote,.page,footer{padding:0 10px}
+  .bar{top:8px;margin-top:8px}
+  .bar-in{gap:6px;padding:0 6px;height:58px}
+  .brand{gap:8px;font-size:15px;overflow:hidden;flex:1 1 auto}
+  .brand span{overflow:hidden;text-overflow:ellipsis}
+  .brand img{width:36px;height:36px;flex:none}
+  .spacer{display:none}
+  .icon-btn{width:40px;height:40px}
+  .sheet{left:10px;right:10px;top:66px}
+  .hero-in{padding:32px 16px 26px;border-radius:32px}
+  .hero h1{font-size:clamp(30px,11vw,50px)}
+  .hero .lead{font-size:17px}
+  .quote-in{padding:26px 16px;border-radius:32px}
+  .quote-in blockquote{font-size:clamp(18px,6vw,22px)}
+  .page-head{padding:24px 16px;border-radius:30px}
+  .page-head h1{font-size:clamp(22px,8vw,30px)}
+  .page-head p{font-size:16px}
+  .sec h2{font-size:clamp(26px,9vw,38px)}
+  .badge{width:60px;height:60px}.badge>svg:last-child{width:28px;height:28px}
+  .sec-head{gap:12px;margin:0 4px 16px}
+  .block{padding:8px;border-radius:26px;gap:8px}
+  .block>h2{font-size:clamp(18px,6.2vw,24px);gap:10px;padding:8px 6px 2px}
+  .block>h2 .badge{width:40px;height:40px}.block>h2 .badge>svg:last-child{width:20px;height:20px}
+  .card,.msgr,.tip,.stat2,.gate,.loader{padding:16px;border-radius:22px}
+  .tile{padding:10px 10px 16px;border-radius:28px}
+  .tile h3{font-size:20px;padding:0 4px}.tile p{padding:0 4px}.tile .go{margin-left:4px}
+  .logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .logo{padding:12px;border-radius:22px;font-size:13px}
+  .brand-tile{width:calc(50% - 6px);height:64px;padding:10px;border-radius:18px}
+  .notes li{grid-template-columns:30px 1fr;gap:10px;font-size:15px}.notes li b.n{width:30px;height:30px;font-size:13px}
+  .msgr h3{font-size:22px}.msgr .write{min-height:60px;font-size:15px;gap:10px;padding:6px 16px 6px 6px}.msgr .write img,.mailicon{width:44px;height:44px}
+  .job2 .info{padding:16px}.job2 .photo2{min-height:200px}
+  .job2 h3{font-size:21px}
+  .person img{width:150px!important;height:150px!important}
+  .kv{grid-template-columns:1fr;gap:2px}.kv dd{margin-bottom:8px}
+  .field{padding:0 4px 0 14px}.field input{font-size:16px}
+  .foot{padding:18px 16px;border-radius:28px}
+  .stat2 b.count{font-size:38px}
+  .meta-card{padding:8px}
+}
+@media (max-width:300px){
+  .brand span{display:none}
+  .logos{grid-template-columns:1fr}
+  .brand-tile{width:100%}
+}
+.intro .card{overflow:hidden}
+
+/* Navigation: erst ab 1180 px nebeneinander, darunter Menü */
+.brand{flex:none}
+@media (max-width:1180px){.links{display:none}.menu-btn{display:grid}}
+/* Rechtsseiten-Raster darf schrumpfen */
+.body{grid-template-columns:minmax(0,1fr)}
+.body section{min-width:0}
+@media (max-width:420px){.body section{padding:18px 16px;border-radius:24px}.body h2{font-size:20px}}
+/* Knopftexte dürfen im Notfall auch hart umbrechen */
+.btn,.go,.write{overflow-wrap:anywhere}
+ul.dots{padding-left:0;margin-left:0}
+@media (max-width:420px){.brand{flex:1 1 auto}}
+.body h2 .t{min-width:0}
+ul.dots li{overflow-wrap:anywhere}
