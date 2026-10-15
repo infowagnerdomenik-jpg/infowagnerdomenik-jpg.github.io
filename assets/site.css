@@ -654,3 +654,10 @@ div.us-card:hover{border-radius:32px;transform:none}
 .us-card .us-deco.d3{right:22px}
 .us-text{padding-right:22px}
 .us-card .us-deco.d2{display:none}
+
+/* Symbol in der Universal-Search-Karte exakt mittig */
+.us-art{padding:14px;padding-right:4px}
+.us-art>svg:first-child{inset:0;margin:auto}
+.us-art{place-items:center}
+.us-art{padding:14px}
+@media (max-width:340px){.us-art{padding:10px}}
